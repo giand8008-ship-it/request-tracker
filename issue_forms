@@ -1,1 +1,39 @@
+name: "Document Request"
+description: "Submit a request for school documents. Track status using labels."
+title: "[Request] {{requester_name}}"
+labels: ["Pending"]
+assignees: []
+
+body:
+  - type: input
+    id: requester_name
+    attributes:
+      label: "Requester Name"
+      placeholder: "Enter your full name"
+      required: true
+
+  - type: dropdown
+    id: document_type
+    attributes:
+      label: "Document Type"
+      options:
+        - Transcript
+        - Certificate
+        - Clearance
+        - Other
+      required: true
+
+  - type: date
+    id: request_date
+    attributes:
+      label: "Date of Request"
+      required: true
+
+  - type: textarea
+    id: comments
+    attributes:
+      label: "Additional Comments"
+      placeholder: "Optional notes about your request"
+Sent
+Write to
 
